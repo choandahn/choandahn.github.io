@@ -71,8 +71,8 @@
   "dateModified": "{{ page.date | date_to_xmlschema }}",
   "inLanguage": "{{ pg_lang }}",
   "description": {{ page_desc | jsonify }},
-  "author": { "@type": "Person", "name": {{ page.author | default: 'Cho&Ahn' | jsonify }} },
-  "publisher": { "@type": "Organization", "name": "Cho&Ahn", "url": {{ '/' | absolute_url | jsonify }} },
+  "author": { "@type": "Person", "name": {{ page.author | default: 'CHO&AHN' | jsonify }} },
+  "publisher": { "@type": "Organization", "name": "CHO&AHN", "url": {{ '/' | absolute_url | jsonify }} },
   "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | jsonify }} },
   "image": {{ og_image | jsonify }}
 }
@@ -82,12 +82,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Cho&Ahn",
+  "name": "CHO&AHN",
   "url": {{ '/' | absolute_url | jsonify }},
   "inLanguage": ["en", "ko"],
   "publisher": {
     "@type": "Organization",
-    "name": "Cho&Ahn",
+    "name": "CHO&AHN",
     "url": {{ '/' | absolute_url | jsonify }},
     "logo": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
     "founder": [
@@ -119,7 +119,7 @@
 
 <header class="site-header">
   <div class="site-title">
-    <a href="{{ home_url | relative_url }}">Cho<span class="amp">&amp;</span>Ahn</a>
+    <a href="{{ home_url | relative_url }}">CHO<span class="amp">&amp;</span>AHN</a>
   </div>
   <nav class="site-nav">
     <a href="{{ essays_url | relative_url }}">{{ essays_label }}</a>
@@ -140,7 +140,7 @@
 <footer class="site-footer">
 <hr>
 <small>
-© {{ 'now' | date: '%Y' }} Cho&amp;Ahn ·
+© {{ 'now' | date: '%Y' }} CHO&amp;AHN ·
 <a href="{{ '/feed.xml' | relative_url }}">RSS</a> ·
 <a href="{{ about_url | relative_url }}">contact</a>
 </small>

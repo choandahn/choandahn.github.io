@@ -1,13 +1,13 @@
-title: Cho&Ahn
-description: Cho&Ahn — essays on AI, startups, product, and programming by Sungwoo and Woonjang.
-description_en: Cho&Ahn — essays on AI, startups, product, and programming by Sungwoo and Woonjang.
+title: CHO&AHN
+description: CHO&AHN — essays on AI, startups, product, and programming by Sungwoo and Woonjang.
+description_en: CHO&AHN — essays on AI, startups, product, and programming by Sungwoo and Woonjang.
 description_ko: 조앤안 — AI, 스타트업, 프로덕트, 프로그래밍에 대한 성우와 운장의 에세이.
 url: "https://www.choandahn.com"
 baseurl: ""
 lang: en
 
 author:
-  name: Cho&Ahn
+  name: CHO&AHN
   email: cho@choandahn.com
 
 # Plugins
