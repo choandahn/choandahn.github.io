@@ -1,0 +1,22 @@
+---
+layout: default
+title: 에세이
+permalink: /ko/essays/
+lang: ko
+description: 조앤안이 쓰는 AI, 스타트업, 프로덕트, 프로그래밍 에세이 모음.
+---
+<h1>에세이</h1>
+
+{% assign posts = site.posts | where: "lang", "ko" %}
+<p>총 {{ posts.size }}편.</p>
+
+<table class="essay-list">
+{% for post in posts %}
+  <tr>
+    <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
+    <td>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </td>
+  </tr>
+{% endfor %}
+</table>

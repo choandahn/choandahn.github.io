@@ -1,0 +1,35 @@
+---
+layout: default
+lang: en
+---
+<h1>Cho&amp;Ahn</h1>
+
+<p>Cho&amp;Ahn is a two-person team building <a href="https://gestel.studio" class="gestel-link"><img src="{{ '/assets/images/gestel.svg' | relative_url }}" class="gestel-icon" alt="" aria-hidden="true">GESTEL</a>. <b>Sungwoo (성우)</b> leads business, <b>Woonjang (운장)</b> leads product.</p>
+
+<p>Random notes on AI, startups, product, and programming. Mostly in Korean, occasionally in English.</p>
+
+<h2>Essays</h2>
+
+{% assign posts = site.posts | where: "lang", "en" %}
+<table class="essay-list">
+{% for post in posts limit: 10 %}
+  <tr>
+    <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
+    <td>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </td>
+  </tr>
+{% endfor %}
+</table>
+
+{% if posts.size > 10 %}
+<p><a href="{{ '/essays/' | relative_url }}">All essays →</a></p>
+{% endif %}
+
+<h2>Elsewhere</h2>
+<ul>
+<li><a href="https://gestel.studio" class="gestel-link"><img src="{{ '/assets/images/gestel.svg' | relative_url }}" class="gestel-icon" alt="" aria-hidden="true">GESTEL</a> — AI creative production SaaS</li>
+<li><a href="https://github.com/choandahn">GitHub</a> — @choandahn</li>
+<li>Sungwoo — <a href="mailto:cho@choandahn.com">cho@choandahn.com</a></li>
+<li>Woonjang — <a href="mailto:ahn@choandahn.com">ahn@choandahn.com</a></li>
+</ul>

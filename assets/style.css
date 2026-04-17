@@ -1,0 +1,346 @@
+/* Cho&Ahn — Modern Korean minimalist hypertext
+ * Pretendard on warm off-white, deep navy accents.
+ */
+
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/PretendardVariable.woff2') format('woff2-variations'),
+       url('fonts/PretendardVariable.woff2') format('woff2');
+}
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #fbfaf7;
+  --navy: #1a2b4a;
+  --navy-soft: rgba(26, 43, 74, 0.35);
+  --crimson: #8b2020;
+  --muted: #8a8378;
+  --rule: #d8d3c8;
+  --code-bg: #f1ede3;
+  --visited: #5a3a7a;
+}
+
+html { background: var(--paper); }
+
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+               "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Header --- */
+.site-header {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 8px;
+}
+
+.site-title a {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-title a:hover { color: var(--navy); }
+.site-title a:visited { color: var(--ink); }
+
+.site-title .amp {
+  color: var(--navy);
+  font-weight: 600;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.site-nav {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.site-nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-nav a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.site-nav a:visited { color: var(--navy); }
+.site-nav .nav-sep { color: var(--muted); margin: 0 7px; }
+.site-nav .lang-toggle {
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+}
+
+.header-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 20px 0 36px;
+}
+
+/* --- Links --- */
+a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--navy-soft);
+  transition: color 0.08s, text-decoration-color 0.08s;
+}
+a:visited {
+  color: var(--visited);
+  text-decoration-color: rgba(90, 58, 122, 0.3);
+}
+a:hover {
+  color: var(--crimson);
+  text-decoration-color: var(--crimson);
+}
+
+/* --- Headings --- */
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 0 14px;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 32px 0 10px;
+  letter-spacing: -0.008em;
+}
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+  color: var(--navy);
+}
+
+/* --- Prose --- */
+p { margin: 0.9em 0; }
+ul, ol { padding-left: 22px; margin: 0.9em 0; }
+li { margin-bottom: 4px; }
+strong, b { font-weight: 700; }
+em, i { font-style: italic; }
+
+/* --- Essay list --- */
+.essay-list {
+  border-collapse: collapse;
+  margin: 14px 0 22px;
+  width: 100%;
+}
+.essay-list td {
+  padding: 5px 0;
+  vertical-align: baseline;
+}
+.essay-list .essay-date {
+  color: var(--muted);
+  font-family: "SF Mono", Monaco, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  padding-right: 16px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Post meta --- */
+.post-meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin: -6px 0 16px;
+}
+.post-meta time {
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-nav { font-size: 14px; color: #555; }
+.back-link { font-size: 14px; color: #555; }
+
+/* --- Rule --- */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 28px 0;
+}
+
+/* --- Code --- */
+code {
+  font-family: "SF Mono", Monaco, Consolas, "Courier New", monospace;
+  background: var(--code-bg);
+  padding: 1px 5px;
+  font-size: 13px;
+  border-radius: 3px;
+  color: var(--navy);
+}
+pre {
+  background: var(--code-bg);
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.55;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+}
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+/* --- Blockquote --- */
+blockquote {
+  border-left: 3px solid var(--navy);
+  margin: 1.2em 0;
+  padding: 2px 0 2px 16px;
+  color: #444;
+}
+blockquote p { margin: 0.4em 0; }
+
+/* --- Language-specific --- */
+article[lang="ko"] {
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+article[lang="ko"] p { text-align: left; }
+article[lang="en"] {
+  line-height: 1.6;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+[lang="ko"] [lang="en"] { word-break: normal; }
+
+.lang-tag {
+  color: var(--muted);
+  font-size: 10px;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  margin-left: 6px;
+  vertical-align: 1px;
+  letter-spacing: 0.04em;
+  padding: 1px 5px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  text-transform: lowercase;
+}
+
+/* --- Images & tables --- */
+img { max-width: 100%; height: auto; margin: 1.2em 0; }
+
+/* --- GESTEL inline icon --- */
+.gestel-icon {
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  vertical-align: -0.12em;
+  margin: 0 0.32em 0 0;
+}
+.gestel-link { white-space: nowrap; }
+
+/* --- About: person block --- */
+.person {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  margin: 30px 0;
+}
+.person .portrait {
+  width: 128px;
+  height: 128px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 2px;
+  margin: 4px 0 0;
+}
+.person-body { flex: 1; min-width: 0; }
+.person-body h2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.person-role {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+.person-body .contact {
+  margin-top: 10px;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 13px;
+}
+@media (max-width: 480px) {
+  .person { flex-direction: column; gap: 14px; }
+  .person .portrait { width: 100%; max-width: 220px; height: auto; aspect-ratio: 1; }
+}
+
+article table {
+  border-collapse: collapse;
+  margin: 1.1em 0;
+  font-size: 14px;
+}
+article th, article td {
+  border: 1px solid var(--rule);
+  padding: 6px 10px;
+  text-align: left;
+}
+article th {
+  background: var(--code-bg);
+  font-weight: 600;
+}
+
+/* --- Selection --- */
+::selection {
+  background: rgba(26, 43, 74, 0.15);
+  color: var(--ink);
+}
+
+/* --- Footer --- */
+.site-footer {
+  margin-top: 60px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+.site-footer a, .site-footer a:visited {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* --- Print --- */
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; max-width: 100%; }
+  .site-header { border-bottom: 1px solid #000; }
+  .site-title .amp { color: #000; }
+  a { color: #000; text-decoration: none; }
+  .header-rule, hr { border-top: 1px solid #888; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  body { padding: 0 18px 40px; font-size: 15px; }
+  .site-header { padding-top: 28px; }
+  .site-title a { font-size: 20px; }
+  h1 { font-size: 20px; }
+}

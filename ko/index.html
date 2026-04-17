@@ -1,0 +1,36 @@
+---
+layout: default
+lang: ko
+permalink: /ko/
+---
+<h1>조앤안</h1>
+
+<p>조앤안은 <a href="https://gestel.studio" class="gestel-link"><img src="{{ '/assets/images/gestel.svg' | relative_url }}" class="gestel-icon" alt="" aria-hidden="true">GESTEL</a>을 만들고 있는 2인 팀입니다. <b>성우</b>는 비즈니스를, <b>운장</b>은 프로덕트를 맡고 있습니다.</p>
+
+<p>AI, 스타트업, 프로덕트, 프로그래밍에 대해 그때그때 쓰는 글. 주로 한국어로, 가끔 영어로.</p>
+
+<h2>에세이</h2>
+
+{% assign posts = site.posts | where: "lang", "ko" %}
+<table class="essay-list">
+{% for post in posts limit: 10 %}
+  <tr>
+    <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
+    <td>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </td>
+  </tr>
+{% endfor %}
+</table>
+
+{% if posts.size > 10 %}
+<p><a href="{{ '/ko/essays/' | relative_url }}">모든 에세이 →</a></p>
+{% endif %}
+
+<h2>Elsewhere</h2>
+<ul>
+<li><a href="https://gestel.studio" class="gestel-link"><img src="{{ '/assets/images/gestel.svg' | relative_url }}" class="gestel-icon" alt="" aria-hidden="true">GESTEL</a> — AI 크리에이티브 프로덕션 SaaS</li>
+<li><a href="https://github.com/choandahn">GitHub</a> — @choandahn</li>
+<li>성우 — <a href="mailto:cho@choandahn.com">cho@choandahn.com</a></li>
+<li>운장 — <a href="mailto:ahn@choandahn.com">ahn@choandahn.com</a></li>
+</ul>

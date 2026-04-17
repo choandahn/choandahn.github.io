@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<article class="post" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y. %-m. %-d." }}</time>
+    {% if page.author %} · {{ page.author }}{% endif %}
+  </p>
+  <hr>
+
+  {{ content }}
+
+  <hr>
+  {% assign lang_posts = site.posts | where: "lang", page.lang %}
+  {% assign prev_post = nil %}
+  {% assign next_post = nil %}
+  {% assign found = false %}
+  {% for p in lang_posts %}
+    {% if found and next_post == nil %}{% assign next_post = p %}{% endif %}
+    {% if p.url == page.url %}{% assign found = true %}{% endif %}
+    {% unless found %}{% assign prev_post = p %}{% endunless %}
+  {% endfor %}
+  <p class="post-nav">
+    {% if prev_post %}← <a href="{{ prev_post.url | relative_url }}">{{ prev_post.title }}</a>{% endif %}
+    {% if prev_post and next_post %} · {% endif %}
+    {% if next_post %}<a href="{{ next_post.url | relative_url }}">{{ next_post.title }}</a> →{% endif %}
+  </p>
+  {% if page.lang == 'en' %}
+  <p class="back-link"><a href="{{ '/essays/' | relative_url }}">All essays</a> · <a href="{{ '/' | relative_url }}">home</a></p>
+  {% else %}
+  <p class="back-link"><a href="{{ '/ko/essays/' | relative_url }}">모든 에세이</a> · <a href="{{ '/ko/' | relative_url }}">home</a></p>
+  {% endif %}
+</article>

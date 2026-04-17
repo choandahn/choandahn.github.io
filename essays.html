@@ -1,0 +1,22 @@
+---
+layout: default
+title: Essays
+permalink: /essays/
+lang: en
+description: All essays from Cho&Ahn on AI, startups, product, and programming.
+---
+<h1>Essays</h1>
+
+{% assign posts = site.posts | where: "lang", "en" %}
+<p>{{ posts.size }} total.</p>
+
+<table class="essay-list">
+{% for post in posts %}
+  <tr>
+    <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
+    <td>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </td>
+  </tr>
+{% endfor %}
+</table>

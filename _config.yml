@@ -1,0 +1,44 @@
+title: Cho&Ahn
+description: Cho&Ahn — essays on AI, startups, product, and programming by Sungwoo and Woonjang.
+description_en: Cho&Ahn — essays on AI, startups, product, and programming by Sungwoo and Woonjang.
+description_ko: 조앤안 — AI, 스타트업, 프로덕트, 프로그래밍에 대한 성우와 운장의 에세이.
+url: "https://www.choandahn.com"
+baseurl: ""
+lang: en
+
+author:
+  name: Cho&Ahn
+  email: cho@choandahn.com
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: /essays/:year/:month/:day/:title/
+
+# Pagination (optional, not used on index by default)
+paginate: 10
+paginate_path: "/essays/page:num/"
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - .omc
+  - .github
+  - scripts
+  - node_modules
+
+# Kramdown settings for clean HTML output
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  smart_quotes: ["lsquo", "rsquo", "ldquo", "rdquo"]
