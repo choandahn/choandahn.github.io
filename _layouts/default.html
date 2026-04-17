@@ -57,7 +57,9 @@
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{{ page_desc }}">
 <meta name="twitter:image" content="{{ og_image }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+{% if pg_lang == 'ko' %}{% assign feed_path = '/ko/feed.xml' %}{% assign alt_feed_path = '/feed.xml' %}{% assign alt_feed_lang = 'en' %}{% else %}{% assign feed_path = '/feed.xml' %}{% assign alt_feed_path = '/ko/feed.xml' %}{% assign alt_feed_lang = 'ko' %}{% endif %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ feed_path | relative_url }}">
+<link rel="alternate" type="application/rss+xml" hreflang="{{ alt_feed_lang }}" title="{{ site.title }}" href="{{ alt_feed_path | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 <link rel="preload" href="{{ '/assets/fonts/PretendardVariable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
@@ -141,7 +143,7 @@
 <hr>
 <small>
 © {{ 'now' | date: '%Y' }} CHO&amp;AHN ·
-<a href="{{ '/feed.xml' | relative_url }}">RSS</a> ·
+<a href="{{ feed_path | relative_url }}">RSS</a> ·
 <a href="{{ about_url | relative_url }}">contact</a>
 </small>
 </footer>
