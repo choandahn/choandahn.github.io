@@ -170,6 +170,17 @@ em, i { font-style: italic; }
   font-variant-numeric: tabular-nums;
 }
 
+/* --- Post hero image --- */
+.post-hero {
+  margin: 0 0 20px;
+}
+.post-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+}
+
 .post-nav { font-size: 14px; color: #555; }
 .back-link { font-size: 14px; color: #555; }
 

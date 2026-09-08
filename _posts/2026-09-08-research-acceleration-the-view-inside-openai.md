@@ -9,6 +9,8 @@ description: "**서문: 연구 가속화, OpenAI 내부의 시각** AGI가 전 �
 source_url: "https://openai.com/index/research-acceleration-the-view-inside-openai/"
 source_author: "OpenAI"
 source_name: "openai.com"
+image: "/assets/images/curation/test-hero.jpg"
+image_alt: "AI agents working in a software factory, editorial illustration"
 ---
 
 > **원문**: [Research acceleration: The view inside OpenAI](https://openai.com/index/research-acceleration-the-view-inside-openai/) — OpenAI, openai.com (2026-09-06)
