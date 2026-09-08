@@ -117,6 +117,7 @@
   {% assign about_label  = 'about' %}
   {% assign alt_label = '한국어' %}
 {% endif %}
+{% assign curation_url = '/ko/curation/' %}
 {% assign nav_alt_url = alt_path %}
 
 <header class="site-header">
@@ -125,6 +126,8 @@
   </div>
   <nav class="site-nav">
     <a href="{{ essays_url | relative_url }}">{{ essays_label }}</a>
+    <span class="nav-sep">·</span>
+    <a href="{{ curation_url | relative_url }}">큐레이션</a>
     <span class="nav-sep">·</span>
     <a href="{{ about_url | relative_url }}">{{ about_label }}</a>
     <span class="nav-sep">·</span>

@@ -1,0 +1,25 @@
+---
+layout: default
+title: 큐레이션
+permalink: /ko/curation/
+lang: ko
+description: Sam이 엄선한 해외 아티클의 한국어 번역 모음.
+---
+<h1>큐레이션</h1>
+
+<p>Sam이 매일 엄선한 해외 아티클을 한국어로 번역한 글입니다. 원문 링크는 각 글 상단에 있습니다.</p>
+
+{% assign posts = site.posts | where: "lang", "ko" | where: "categories", "curation" %}
+<p>총 {{ posts.size }}편.</p>
+
+<table class="essay-list">
+{% for post in posts %}
+  <tr>
+    <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
+    <td>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.source_author %}<span class="essay-source">· {{ post.source_author }}</span>{% endif %}
+    </td>
+  </tr>
+{% endfor %}
+</table>
