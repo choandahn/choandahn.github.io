@@ -78,6 +78,9 @@ Claire의 Codex 사용 패턴:
 
 ---
 
+
+![Priority buckets with one glowing and others overflowing](/assets/images/curation/2026-08-25-inline.jpg)
+
 **5. Claude Design → Markdown → Codex 기술 디자인 시스템**
 
 두 사람 모두 동의: **Claude Design이 디자인 시스템 생성에서는 unmatched다.**

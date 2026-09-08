@@ -72,6 +72,8 @@ image_alt: "A university lecture hall with a rocket launching from a laptop"
 
 하지만 학생들이 자신의 프로젝트를 하도록 장려하는 것은 대학에게 어려울 수 있다. 그것은 학생들에게 더 많은 자유 시간을 주는 것을 의미하며, 대학은 그것을 좋아하지 않을 수 있다.
 
+![Two identical buildings where one has a rocket sprouting from the roof](/assets/images/curation/2026-08-27-inline.jpg)
+
 Microsoft와 Meta는 공통점이 하나 있는데, 그것을 아는 사람은 거의 없다. 두 회사 모두 Harvard의 reading period(수업 종료와 기말고사 사이의 공백 기간) 동안 시작되었다. Reading period는 수업 종료와 기말고사 시작 사이의 간격이다. 'reading period'라고 불리는 이유는 학생들이 그 기간 동안 시험을 준비해야 하기 때문이다. 하지만 reading period는 또한 새로운 프로젝트를 시작하기에 완벽한 특별한 조합의 특성을 가지고 있다: 학생들은 모두 캠퍼스에 있고, **다음 날까지 제출해야 할 과제가 없다.** 특히 후자의 제약은 가장 야심 찬 학생들에게 엄청난 부담이다. 이 제약을 단 몇 주만 없애는 것만으로도 두 개의 트릴리언 달러 회사가 탄생했다. Harvard의 reading period가 두 배로 길었다면 미국 GDP가 얼마나 되었을지 상상해보라.
 
 대학은 학생들을 수업으로 덜 바쁘게 유지하는 아이디어에 저항하는 경향이 있을 것이다. 부분적으로는 행정가들이 무언가를 성취하려면 적극적인 조치를 취해야 한다고 느끼기 때문이다. 단순히 학생들을 내버려 둠으로써 무언가를 성취하는 것은 그들의 본성에 맞지 않는다.

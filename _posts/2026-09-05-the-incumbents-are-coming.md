@@ -53,7 +53,10 @@ Claude나 Codex 같은 범용 에이전트가 이 모든 시스템에 걸쳐 손
 
 이런 한계에도 불구하고, Claude는 여전히 시스템 오브 레코드 위에 앉을 수 있습니다. Claudeforce는 Claude를 일의 정문으로 만들고, Salesforce는 CRM 데이터와 액션을 계속 소유합니다. 그리고 Claude는 incumbent들이 허가한 더 깊은 통합을 통해 계속 맥락을 쌓아갈 수 있습니다.
 
-### 버티컬 AI는 어떻게 배우는가 (How vertical AI learns)
+#
+![A layered pyramid with the top layer connected by dotted lines](/assets/images/curation/2026-09-05-inline.jpg)
+
+## 버티컬 AI는 어떻게 배우는가 (How vertical AI learns)
 
 일의 더 많은 부분을 소유하는 것이 중요한 이유는, 스타트업이 최종 결과물을 만들어낸 결정과 수정 과정을 볼 수 있기 때문입니다. 모델은 올바른 맥락, 도구, 워크플로, 평가(evals)를 갖춘 '버티컬 하네스(vertical harness)'를 통해 특정 잡에서 더 좋은 성능을 냅니다. 학습 루프는 매 작업이 끝난 후 에이전트의 작업물, 전문가 피드백, 결과물 자체를 사용해 다음 시도를 개선함으로써 시스템(모델 + 하네스)을 발전시키는 것입니다.
 
