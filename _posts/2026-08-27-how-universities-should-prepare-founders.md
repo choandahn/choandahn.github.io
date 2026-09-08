@@ -9,6 +9,8 @@ description: "대학은 학생들이 스타트업을 시작할 수 있도록 어
 source_url: "https://paulgraham.com/prepare.html"
 source_author: "Paul Graham"
 source_name: "paulgraham.com"
+image: "/assets/images/curation/2026-08-27-hero.jpg"
+image_alt: "A university lecture hall with a rocket launching from a laptop"
 ---
 
 > **원문**: [How Universities Should Prepare Founders](https://paulgraham.com/prepare.html) — Paul Graham, paulgraham.com (2026-08)

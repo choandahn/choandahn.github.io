@@ -9,6 +9,8 @@ description: "Anthropic이 Claude 소비자용 애플리케이션(Claude.ai와 C
 source_url: "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/"
 source_author: "Simon Willison"
 source_name: "Simon Willison's Weblog"
+image: "/assets/images/curation/2026-09-03-hero.jpg"
+image_alt: "A music note and book page blocked by a shield with an axolotl peeking behind"
 ---
 
 > **원문**: [Claude's new system prompt really doesn't want to reproduce song lyrics](https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/) — Simon Willison, Simon Willison's Weblog (2026-09-02)

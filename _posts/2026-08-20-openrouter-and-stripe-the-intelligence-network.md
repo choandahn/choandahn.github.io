@@ -9,6 +9,8 @@ description: "**OpenRouter & Stripe: 인텔리전스 네트워크** Stripe가 Op
 source_url: "https://www.a16z.news/p/openrouter-and-stripe-the-intelligence"
 source_author: "Martin Casado"
 source_name: "a16z"
+image: "/assets/images/curation/2026-08-20-hero.jpg"
+image_alt: "Two network nodes connected by a glowing pathway over a payment terminal and AI chip"
 ---
 
 > **원문**: [OpenRouter & Stripe: The Intelligence Network](https://www.a16z.news/p/openrouter-and-stripe-the-intelligence) — Martin Casado, a16z (2026-08-19)

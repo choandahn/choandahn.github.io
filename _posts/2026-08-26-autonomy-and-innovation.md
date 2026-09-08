@@ -9,6 +9,8 @@ description: "모든 서부극이 클리셰를 따르진 않았지만, 1930년�
 source_url: "https://stratechery.com/2026/autonomy-and-innovation/"
 source_author: "Ben Thompson"
 source_name: "Stratechery"
+image: "/assets/images/curation/2026-08-26-hero.jpg"
+image_alt: "A self-driving car and drone merging onto one road"
 ---
 
 > **원문**: [Autonomy and Innovation](https://stratechery.com/2026/autonomy-and-innovation/) — Ben Thompson, Stratechery (2026-08-24)

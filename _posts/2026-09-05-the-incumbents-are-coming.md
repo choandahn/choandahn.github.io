@@ -9,6 +9,8 @@ description: "**기존 시스템 오브 레코드(systems of record)에 대한 �
 source_url: "https://www.a16z.news/p/the-incumbents-are-coming"
 source_author: "Seema Amble"
 source_name: "a16z"
+image: "/assets/images/curation/2026-09-05-hero.jpg"
+image_alt: "An office building and startup storefront connected by an AI hand through a data pipeline"
 ---
 
 > **원문**: [The Incumbents Are Coming](https://www.a16z.news/p/the-incumbents-are-coming) — Seema Amble, a16z (2026-09-03)

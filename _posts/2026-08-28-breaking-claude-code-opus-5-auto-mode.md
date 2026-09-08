@@ -9,6 +9,8 @@ description: "**서론** 이 글에서는 단순한 웹사이트 요약 요청 �
 source_url: "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/"
 source_author: "Johann Rehberger (wunderwuzzi)"
 source_name: "Embrace The Red"
+image: "/assets/images/curation/2026-08-28-hero.jpg"
+image_alt: "A padlock opened by a fishing-hook key"
 ---
 
 > **원문**: [Breaking Claude Code Opus 5 Auto Mode](https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/) — Johann Rehberger (wunderwuzzi), Embrace The Red (2026-08-26)

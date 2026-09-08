@@ -9,6 +9,8 @@ description: "**핵심 요약(TL;DR):** '가라앉는 배' 같은 은유가 코�
 source_url: "https://zachkehs.com/blog/theres_no_limit_to_how_bad_code_can_get/"
 source_author: "Zach Kehs"
 source_name: "zachkehs.com"
+image: "/assets/images/curation/2026-09-07-hero.jpg"
+image_alt: "A ship sinking into geometric waves beside a floating lifeboat"
 ---
 
 > **원문**: [There's No Limit to How Bad Code Can Get](https://zachkehs.com/blog/theres_no_limit_to_how_bad_code_can_get/) — Zach Kehs, zachkehs.com (2026-09-04)
