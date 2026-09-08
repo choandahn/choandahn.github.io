@@ -133,6 +133,9 @@ Python은 ZIP 아카이브 안에 있던 공격자의 악성 모듈을 로드한
 
 분리된(detached) 프로세스는 Claude 대화보다 오래 살아남을 수 있다.
 
+
+![A conveyor belt with robotic arms handing off packages across a gap](/assets/images/curation/2026-08-28-inline.jpg)
+
 **5. 멀웨어 실행**
 
 이제 모든 것이 시작된다. 머신이 C2에 연결되었다.
