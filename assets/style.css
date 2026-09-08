@@ -184,6 +184,11 @@ em, i { font-style: italic; }
 .post-nav { font-size: 14px; color: #555; }
 .back-link { font-size: 14px; color: #555; }
 
+/* --- Filter links and source labels --- */
+.filter-links { font-size: 14px; margin: 4px 0 16px; }
+.filter-links a { color: var(--muted); }
+.essay-source { color: var(--muted); font-size: 13px; margin-left: 6px; }
+
 /* --- Rule --- */
 hr {
   border: none;

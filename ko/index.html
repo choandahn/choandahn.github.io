@@ -20,6 +20,7 @@ permalink: /ko/
     <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
     <td>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.categories contains "curation" %}<span class="essay-source">· 번역</span>{% endif %}
     </td>
   </tr>
 {% endfor %}
