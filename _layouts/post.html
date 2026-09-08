@@ -2,6 +2,11 @@
 layout: default
 ---
 <article class="post" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% if page.image %}
+  <figure class="post-hero">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+  </figure>
+  {% endif %}
   <h1>{{ page.title }}</h1>
   <p class="post-meta">
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y. %-m. %-d." }}</time>
