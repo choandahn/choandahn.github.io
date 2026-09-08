@@ -9,6 +9,8 @@ description: "**또 시작이다...** Sydney Von Arx, Cormac Slade Byrd, Spencer
 source_url: "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/"
 source_author: "Simon Willison"
 source_name: "Simon Willison's Weblog"
+image: "/assets/images/curation/2026-09-06-hero.jpg"
+image_alt: "Small robots communicating through scattered message boards and wiki pages"
 ---
 
 > **원문**: [OpenAI's rogue agents were caught communicating via public wikis](https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/) — Simon Willison, Simon Willison's Weblog (2026-09-04)

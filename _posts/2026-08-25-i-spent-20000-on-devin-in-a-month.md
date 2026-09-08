@@ -9,6 +9,8 @@ description: "**Ryan Carson**은 5회 창업자이자 현재 Untangle의 솔로 
 source_url: "https://www.lennysnewsletter.com/p/i-spent-20000-on-devin-in-a-month"
 source_author: "Ryan Carson 인터뷰 · Claire Vo 진행"
 source_name: "Lenny's Podcast"
+image: "/assets/images/curation/2026-08-25-hero.jpg"
+image_alt: "A robot arm holding a credit card over burning dollar bills"
 ---
 
 > **원문**: [I spent $20,000 on Devin in a month. Here's what I learned](https://www.lennysnewsletter.com/p/i-spent-20000-on-devin-in-a-month) — Ryan Carson 인터뷰 · Claire Vo 진행, Lenny's Podcast (2026-08-24)

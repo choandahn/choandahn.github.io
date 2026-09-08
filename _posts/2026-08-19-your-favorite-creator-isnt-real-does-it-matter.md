@@ -9,6 +9,8 @@ description: "**'내가 Alabama의 '가장 인기 있는 sorority 스타'로 만
 source_url: "https://www.a16z.news/p/your-favorite-creator-isnt-realdoes"
 source_author: "Olivia Moore"
 source_name: "a16z"
+image: "/assets/images/curation/2026-08-19-hero.jpg"
+image_alt: "A human figure dissolving into pixels, half real half synthetic"
 ---
 
 > **원문**: [Your Favorite Creator Isn't Real — Does it Matter?](https://www.a16z.news/p/your-favorite-creator-isnt-realdoes) — Olivia Moore, a16z (2026-08-18)

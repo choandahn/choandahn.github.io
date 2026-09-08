@@ -9,6 +9,8 @@ description: "**들어가며** 소프트웨어 팩토리란 소프트웨어 작�
 source_url: "https://addyo.substack.com/p/human-judgment-doesnt-leave-the-software"
 source_author: "Addy Osmani"
 source_name: "Elevate (Addy Osmani's Newsletter)"
+image: "/assets/images/curation/2026-08-23-hero.jpg"
+image_alt: "A factory floor with human hands reaching toward quality checkpoints"
 ---
 
 > **원문**: [Human judgment doesn't leave the software factory. It relocates.](https://addyo.substack.com/p/human-judgment-doesnt-leave-the-software) — Addy Osmani, Elevate (Addy Osmani's Newsletter) (2026-08-21)

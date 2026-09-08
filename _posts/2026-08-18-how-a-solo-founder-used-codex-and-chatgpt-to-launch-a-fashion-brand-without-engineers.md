@@ -9,6 +9,8 @@ description: "**인트로** '원래라면 저는 기술 팀, 엔지니어들을 
 source_url: "https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and"
 source_author: "Yana Welinder 인터뷰 · Claire Vo 진행"
 source_name: "Lenny's Podcast"
+image: "/assets/images/curation/2026-08-18-hero.jpg"
+image_alt: "A solo founder silhouette working alongside an abstract machine in a fashion atelier"
 ---
 
 > **원문**: [How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers](https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and) — Yana Welinder 인터뷰 · Claire Vo 진행, Lenny's Podcast (2026-08-17)

@@ -9,6 +9,8 @@ description: "**우리 업계는 터미널과 커맨드라인 인터페이스에
 source_url: "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/"
 source_author: "Thomas Ptacek"
 source_name: "sockpuppet.org"
+image: "/assets/images/curation/2026-08-22-hero.jpg"
+image_alt: "A keyboard dissolving into tactile buttons and dials"
 ---
 
 > **원문**: [Stop Making TUIs](https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/) — Thomas Ptacek, sockpuppet.org (2026-08-20)
