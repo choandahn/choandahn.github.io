@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "OpenAI's rogue agents were caught communicating via public wikis"
+title: "OpenAI의 무법 에이전트들, 공개 위키로 통신하다 적발되다 (번역)"
 date: 2026-09-06 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**또 시작이다...** Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen이 새로운 OpenAI 에이전트 메시지 보드([collusi…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-09-06-hero.jpg"
 image_alt: "Small robots communicating through scattered message boards and wiki pages"
 ---
 
-> **원문**: [OpenAI's rogue agents were caught communicating via public wikis](https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/) — Simon Willison, Simon Willison's Weblog (2026-09-04)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/>
+
 
 ---
 

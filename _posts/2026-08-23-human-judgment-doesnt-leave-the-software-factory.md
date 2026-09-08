@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Human judgment doesn't leave the software factory. It relocates."
+title: "인간의 판단은 소프트웨어 팩토리를 떠나지 않는다, 자리를 옮길 뿐이다 (번역)"
 date: 2026-08-23 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**들어가며** 소프트웨어 팩토리란 소프트웨어 작업을 둘러싼 **반복 가능한 루프**다. 만약 당신이 소프트웨어 팩토리를 구축하고 있다면, 출시할 수 있을 만큼 좋은 코드에는 여전히 인간의 취향(h…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-23-hero.jpg"
 image_alt: "A factory floor with human hands reaching toward quality checkpoints"
 ---
 
-> **원문**: [Human judgment doesn't leave the software factory. It relocates.](https://addyo.substack.com/p/human-judgment-doesnt-leave-the-software) — Addy Osmani, Elevate (Addy Osmani's Newsletter) (2026-08-21)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://addyo.substack.com/p/human-judgment-doesnt-leave-the-software>
+
 
 ---
 

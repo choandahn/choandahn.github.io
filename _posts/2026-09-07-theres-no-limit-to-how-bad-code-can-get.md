@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "There's No Limit to How Bad Code Can Get"
+title: "코드는 나빠지는 데 한계가 없다 (번역)"
 date: 2026-09-07 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**핵심 요약(TL;DR):** '가라앉는 배' 같은 은유가 코드베이스를 설명하는 데 자주 쓰이지만, 이는 오해를 부른다. 코드 품질이 가상의 바닥에 도달하기 훨씬 전에 *비즈니스*가 먼저 가라앉는…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-09-07-hero.jpg"
 image_alt: "A ship sinking into geometric waves beside a floating lifeboat"
 ---
 
-> **원문**: [There's No Limit to How Bad Code Can Get](https://zachkehs.com/blog/theres_no_limit_to_how_bad_code_can_get/) — Zach Kehs, zachkehs.com (2026-09-04)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://zachkehs.com/blog/theres_no_limit_to_how_bad_code_can_get/>
+
 
 ---
 

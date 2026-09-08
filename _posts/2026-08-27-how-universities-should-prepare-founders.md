@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How Universities Should Prepare Founders"
+title: "대학은 창업가를 어떻게 준비시켜야 하는가 (번역)"
 date: 2026-08-27 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "대학은 학생들이 스타트업을 시작할 수 있도록 어떻게 준비시켜야 할까? Y Combinator는 이 질문에 답할 완벽한 위치에 있다. 왜냐하면 우리가 그 다음 단계를 맡기 때문이다. 우리는 대학원과…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-27-hero.jpg"
 image_alt: "A university lecture hall with a rocket launching from a laptop"
 ---
 
-> **원문**: [How Universities Should Prepare Founders](https://paulgraham.com/prepare.html) — Paul Graham, paulgraham.com (2026-08)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://paulgraham.com/prepare.html>
+
 
 ---
 

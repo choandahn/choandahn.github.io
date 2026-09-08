@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "I spent $20,000 on Devin in a month. Here's what I learned"
+title: "한 달에 2만 달러를 Devin에 써서 배운 것들 (번역)"
 date: 2026-08-25 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**Ryan Carson**은 5회 창업자이자 현재 Untangle의 솔로 파운더다. Untangle은 법률 회사(B2B SaaS)를 위한 이혼 케이스 관리 플랫폼이다. 전에는 Treehouse(온…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-25-hero.jpg"
 image_alt: "A robot arm holding a credit card over burning dollar bills"
 ---
 
-> **원문**: [I spent $20,000 on Devin in a month. Here's what I learned](https://www.lennysnewsletter.com/p/i-spent-20000-on-devin-in-a-month) — Ryan Carson 인터뷰 · Claire Vo 진행, Lenny's Podcast (2026-08-24)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://www.lennysnewsletter.com/p/i-spent-20000-on-devin-in-a-month>
+
 
 ---
 

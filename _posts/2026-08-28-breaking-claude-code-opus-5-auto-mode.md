@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Breaking Claude Code Opus 5 Auto Mode"
+title: "Claude Code Opus 5 Auto Mode 깨뜨리기 (번역)"
 date: 2026-08-28 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**서론** 이 글에서는 단순한 웹사이트 요약 요청 하나로 Claude Code Opus 5의 Auto Mode를 하이재킹하고, 60-80%의 공격 성공률로 코드 실행(RCE)을 달성하는 방법을 탐…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-28-hero.jpg"
 image_alt: "A padlock opened by a fishing-hook key"
 ---
 
-> **원문**: [Breaking Claude Code Opus 5 Auto Mode](https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/) — Johann Rehberger (wunderwuzzi), Embrace The Red (2026-08-26)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/>
+
 
 ---
 

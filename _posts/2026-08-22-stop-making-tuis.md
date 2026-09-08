@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Stop Making TUIs"
+title: "TUI를 더 이상 만들지 말자 (번역)"
 date: 2026-08-22 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**우리 업계는 터미널과 커맨드라인 인터페이스에 대해 이상한 관계를 가지고 있다. 이제 이를 재평가할 때가 왔다.** 최근에 주변 친구들에게 네이티브 유저 인터페이스를 만들어보라고 권하고 있다. 몇…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-22-hero.jpg"
 image_alt: "A keyboard dissolving into tactile buttons and dials"
 ---
 
-> **원문**: [Stop Making TUIs](https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/) — Thomas Ptacek, sockpuppet.org (2026-08-20)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/>
+
 
 ---
 

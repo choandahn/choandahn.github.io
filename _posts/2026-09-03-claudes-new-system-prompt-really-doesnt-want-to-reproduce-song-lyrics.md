@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Claude's new system prompt really doesn't want to reproduce song lyrics"
+title: "Claude의 새 시스템 프롬프트는 가사 복제를 정말 원하지 않는다 (번역)"
 date: 2026-09-03 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "Anthropic이 Claude 소비자용 애플리케이션(Claude.ai와 Claude 모바일 앱, 아쉽게도 Claude Cowork나 Claude Code는 제외)의 **시스템 프롬프트를 공개**…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-09-03-hero.jpg"
 image_alt: "A music note and book page blocked by a shield with an axolotl peeking behind"
 ---
 
-> **원문**: [Claude's new system prompt really doesn't want to reproduce song lyrics](https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/) — Simon Willison, Simon Willison's Weblog (2026-09-02)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/>
+
 
 ---
 

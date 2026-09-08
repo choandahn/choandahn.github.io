@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Research acceleration: The view inside OpenAI"
+title: "연구 가속화: OpenAI 내부의 시각 (번역)"
 date: 2026-09-08 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**서문: 연구 가속화, OpenAI 내부의 시각** AGI가 전 인류에게 이익이 되려면 민주적으로 거버넌스되어야 한다고 우리는 믿는다. 이는 고성능 AI 시스템의 역량, 위험, 안전장치에 대한…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/test-hero.jpg"
 image_alt: "AI agents working in a software factory, editorial illustration"
 ---
 
-> **원문**: [Research acceleration: The view inside OpenAI](https://openai.com/index/research-acceleration-the-view-inside-openai/) — OpenAI, openai.com (2026-09-06)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://openai.com/index/research-acceleration-the-view-inside-openai/>
+
 
 ---
 

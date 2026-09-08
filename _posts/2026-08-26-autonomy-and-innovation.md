@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Autonomy and Innovation"
+title: "자율성과 혁신 (번역)"
 date: 2026-08-26 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "모든 서부극이 클리셰를 따르진 않았지만, 1930년대 카우보이 연속극에선 확립된 시각적 장치가 있었다. 주인공은 하얀 모자를 쓰고, 악당은 검은 모자를 썼다. 그러나 결국, 둘 다 모자를 쓴 카우보…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-26-hero.jpg"
 image_alt: "A self-driving car and drone merging onto one road"
 ---
 
-> **원문**: [Autonomy and Innovation](https://stratechery.com/2026/autonomy-and-innovation/) — Ben Thompson, Stratechery (2026-08-24)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://stratechery.com/2026/autonomy-and-innovation/>
+
 
 ---
 

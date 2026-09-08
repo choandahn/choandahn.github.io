@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers"
+title: "Codex와 ChatGPT로 엔지니어 없이 패션 브랜드를 만든 솔로 파운더 (번역)"
 date: 2026-08-18 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**인트로** '원래라면 저는 기술 팀, 엔지니어들을 고용했을 거예요. 하지만 그렇게 하지 않았죠. 그냥 Codex한테 와서 웹사이트를 만들어 달라고 했어요.' 야나 웰린더는 Yana Bana라는…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-18-hero.jpg"
 image_alt: "A solo founder silhouette working alongside an abstract machine in a fashion atelier"
 ---
 
-> **원문**: [How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers](https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and) — Yana Welinder 인터뷰 · Claire Vo 진행, Lenny's Podcast (2026-08-17)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and>
+
 
 ---
 

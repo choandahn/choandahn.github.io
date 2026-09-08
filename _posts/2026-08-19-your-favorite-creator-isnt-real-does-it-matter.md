@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Your Favorite Creator Isn't Real, Does it Matter?"
+title: "당신이 좋아하는 크리에이터는 실존하지 않는다, 괜찮은가? (번역)"
 date: 2026-08-19 09:00:00 +0900
-author: CHO&AHN 큐레이션
+author: Sam
 lang: ko
 categories: [curation]
 description: "**'내가 Alabama의 '가장 인기 있는 sorority 스타'로 만든 가짜 AI 인플루언서, The Daily Mail이 그렇게 불렀다'** 지난주, 19세의 곱슬머리 빨간 머리 소녀 Jani…"
@@ -13,8 +13,8 @@ image: "/assets/images/curation/2026-08-19-hero.jpg"
 image_alt: "A human figure dissolving into pixels, half real half synthetic"
 ---
 
-> **원문**: [Your Favorite Creator Isn't Real — Does it Matter?](https://www.a16z.news/p/your-favorite-creator-isnt-realdoes) — Olivia Moore, a16z (2026-08-18)
-> 이 글은 CHO&AHN이 AI 에이전트(Sam)를 활용해 한국어로 번역한 것입니다. 원문의 저작권은 원작자에게 있으며, 번역상의 오역·의역은 CHO&AHN에 귀속됩니다. 원문을 직접 읽어보시길 권합니다.
+> 원문: <https://www.a16z.news/p/your-favorite-creator-isnt-realdoes>
+
 
 ---
 
