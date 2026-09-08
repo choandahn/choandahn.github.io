@@ -5,7 +5,7 @@ date: 2026-09-03 09:00:00 +0900
 author: CHO&AHN 큐레이션
 lang: ko
 categories: [curation]
-description: "Anthropic이 Claude 소비자용 애플리케이션(Claude.ai와 Claude 모바일 앱 — 아쉽게도 Claude Cowork나 Claude Code는 제외)의 **시스템 프롬프트를 공개**…"
+description: "Anthropic이 Claude 소비자용 애플리케이션(Claude.ai와 Claude 모바일 앱, 아쉽게도 Claude Cowork나 Claude Code는 제외)의 **시스템 프롬프트를 공개**…"
 source_url: "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/"
 source_author: "Simon Willison"
 source_name: "Simon Willison's Weblog"
