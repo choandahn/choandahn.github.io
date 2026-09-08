@@ -5,7 +5,7 @@ date: 2026-09-05 09:00:00 +0900
 author: CHO&AHN 큐레이션
 lang: ko
 categories: [curation]
-description: "**기존 시스템 오브 레코드(systems of record)에 대한 낙관론은 이렇습니다 — AI는 시스템 오브 레코드를 덜 중요하게 만드는 게 아니라, 더 중요하게 만든다.** 왜냐하면 이론상 고…"
+description: "**기존 시스템 오브 레코드(systems of record)에 대한 낙관론은 이렇습니다, AI는 시스템 오브 레코드를 덜 중요하게 만드는 게 아니라, 더 중요하게 만든다.** 왜냐하면 이론상 고…"
 source_url: "https://www.a16z.news/p/the-incumbents-are-coming"
 source_author: "Seema Amble"
 source_name: "a16z"

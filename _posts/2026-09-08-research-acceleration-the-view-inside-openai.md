@@ -5,7 +5,7 @@ date: 2026-09-08 09:00:00 +0900
 author: CHO&AHN 큐레이션
 lang: ko
 categories: [curation]
-description: "**서문: 연구 가속화 — OpenAI 내부의 시각** AGI가 전 인류에게 이익이 되려면 민주적으로 거버넌스되어야 한다고 우리는 믿는다. 이는 고성능 AI 시스템의 역량, 위험, 안전장치에 대한…"
+description: "**서문: 연구 가속화, OpenAI 내부의 시각** AGI가 전 인류에게 이익이 되려면 민주적으로 거버넌스되어야 한다고 우리는 믿는다. 이는 고성능 AI 시스템의 역량, 위험, 안전장치에 대한…"
 source_url: "https://openai.com/index/research-acceleration-the-view-inside-openai/"
 source_author: "OpenAI"
 source_name: "openai.com"

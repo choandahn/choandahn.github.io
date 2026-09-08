@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Your Favorite Creator Isn't Real — Does it Matter?"
+title: "Your Favorite Creator Isn't Real, Does it Matter?"
 date: 2026-08-19 09:00:00 +0900
 author: CHO&AHN 큐레이션
 lang: ko
