@@ -15,7 +15,7 @@ image_alt: "Two founders test a small machine beside discarded prototypes and a 
 
 > 원문: <https://www.youtube.com/watch?v=cqp8dI6zbzc>
 
-공동창업자도, 제품도, 아이디어도 없이 샌프란시스코에 도착했다. 2026년에 회사를 시작한다면 무엇부터 해야 할까.
+공동창업자도, 제품도, 아이디어도 없이 샌프란시스코에 막 도착했다고 가정해보자. 2026년에 회사를 시작한다면 무엇부터 해야 할까.
 
 Wispr Flow의 CEO이자 공동창업자인 Tanay Kothari는 Hector와의 대화에서 그 순서를 다섯 단계로 나눈다. 자기 이해, 공동창업자, 아이디어, 자본, 그리고 제품·시장 적합성(Product-Market Fit, PMF)이다. 이 글은 약 30분의 영상 대화를 한국어로 번역하고 주제별로 정리했다. 반복되는 문답은 줄였으며, 창업과 투자에 관한 조언은 Kothari의 경험과 관점이다.
 
