@@ -28,7 +28,7 @@
 {% endif %}
 {% assign page_desc = page.description | default: default_desc %}
 {% if page.title %}{% capture page_title %}{{ page.title }} — {{ site.title }}{% endcapture %}{% else %}{% capture page_title %}{{ site.title }} — essays on AI, startups, product, and programming{% endcapture %}{% endif %}
-{% assign og_image = page.image | default: '/assets/images/og.png' | absolute_url %}
+{% assign og_image = page.share_image | default: page.image | default: '/assets/images/og.png' | absolute_url %}
 {% assign canonical_url = page.url | absolute_url %}
 {% assign alt_url = alt_path | absolute_url %}
 <html lang="{{ pg_lang }}">
@@ -74,7 +74,7 @@
   "inLanguage": "{{ pg_lang }}",
   "description": {{ page_desc | jsonify }},
   "author": { "@type": "Person", "name": {{ page.author | default: 'CHO&AHN' | jsonify }} },
-  "publisher": { "@type": "Organization", "name": "CHO&AHN", "url": {{ '/' | absolute_url | jsonify }} },
+  "publisher": { "@type": "Organization", "@id": "https://www.choandahn.com/#organization", "name": "조앤안", "alternateName": "CHO&AHN", "url": {{ '/' | absolute_url | jsonify }} },
   "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | jsonify }} },
   "image": {{ og_image | jsonify }}
 }
@@ -89,12 +89,18 @@
   "inLanguage": ["en", "ko"],
   "publisher": {
     "@type": "Organization",
-    "name": "CHO&AHN",
+    "@id": "https://www.choandahn.com/#organization",
+    "name": "조앤안",
+    "alternateName": ["CHO&AHN", "Cho&Ahn", "choandahn"],
     "url": {{ '/' | absolute_url | jsonify }},
     "logo": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
     "founder": [
-      { "@type": "Person", "name": "Sungwoo", "email": "cho@choandahn.com" },
-      { "@type": "Person", "name": "Woonjang", "email": "ahn@choandahn.com" }
+      { "@type": "Person", "@id": "https://ax.choandahn.com/#cho", "name": "조성우", "alternateName": "Sungwoo", "email": "cho@choandahn.com" },
+      { "@type": "Person", "@id": "https://ax.choandahn.com/#ahn", "name": "안운장", "alternateName": "Woonjang", "email": "ahn@choandahn.com" }
+    ],
+    "brand": [
+      { "@type": "Brand", "name": "GESTEL", "url": "https://www.gestel.studio/" },
+      { "@type": "Brand", "name": "조앤안AX", "alternateName": "C&AX", "url": "https://ax.choandahn.com/" }
     ]
   }
 }
@@ -132,6 +138,8 @@
     <a href="{{ about_url | relative_url }}">{{ about_label }}</a>
     <span class="nav-sep">·</span>
     <a href="https://gestel.studio">GESTEL</a>
+    <span class="nav-sep">·</span>
+    <a href="https://ax.choandahn.com/">{% if pg_lang == 'ko' %}조앤안AX{% else %}C&amp;AX{% endif %}</a>
     <span class="nav-sep">·</span>
     <a href="{{ nav_alt_url | relative_url }}" class="lang-toggle">{{ alt_label }}</a>
   </nav>
