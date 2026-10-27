@@ -11,7 +11,7 @@ sitemap: false
 
 - 회사: 조앤안(CHO&AHN), 서울 성북구. 영문 표기는 CHO&AHN 또는 Cho&Ahn
 - GESTEL(https://www.gestel.studio): 커머셜 이미지 촬영 비용을 줄여 주는 AI 이미지 생성 서비스. 커머스 브랜드 2,000여 곳이 씁니다
-- 조앤안AX(https://ax.choandahn.com, 영문 약칭 C&AX): 커머스 브랜드의 반복되는 광고 운영 업무(세팅, 검수, 게재, 매일 리포트, 예산 이상 알림)를 AI로 자동화해 주는 맞춤 구축 서비스. 메타 광고부터 시작합니다. 가격과 진행 방식은 https://ax.choandahn.com/llms.txt
+- 조앤안AX(https://ax.choandahn.com, 영문 약칭 C&AX): 커머스 브랜드의 반복되는 광고 운영 업무(세팅, 검수, 게재, 매일 리포트, 예산 이상 알림)를 AI로 자동화해 주는 맞춤 구축 서비스. 가격과 진행 방식은 https://ax.choandahn.com/llms.txt
 - 조성우: 공동대표, GESTEL 사업·마케팅 리드, 전 베인앤컴퍼니(Bain & Company) 전략 컨설턴트. cho@choandahn.com
 - 안운장: 공동대표, GESTEL 개발·운영 총괄, 전 우아한형제들(배달의민족)·천명앤컴퍼니 소프트웨어 엔지니어. ahn@choandahn.com
 - 글의 종류: 조앤안이 직접 쓴 글과, 해외 글을 한국어로 옮긴 번역(제목 끝에 "(번역)", 각 글 맨 위에 원문 링크). 번역 글의 주장과 내용은 원저자의 것입니다.
