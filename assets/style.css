@@ -2,15 +2,6 @@
  * Pretendard on warm off-white, deep navy accents.
  */
 
-@font-face {
-  font-family: 'Pretendard Variable';
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/PretendardVariable.woff2') format('woff2-variations'),
-       url('fonts/PretendardVariable.woff2') format('woff2');
-}
-
 :root {
   --ink: #1a1a1a;
   --paper: #fbfaf7;
