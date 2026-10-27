@@ -1,0 +1,163 @@
+{% comment %}
+구조화 데이터. 회사와 두 사람의 @id는 ax.choandahn.com의 JSON-LD와 같게 둔다(같은 회사, 같은 사람으로 묶이도록).
+팀 경력이나 숫자가 바뀌면 ax.choandahn.com의 JSON-LD와 llms.txt, 이 사이트의 /llms.txt도 함께 고친다.
+{% endcomment %}
+{%- assign org_id = 'https://www.choandahn.com/#organization' -%}
+{%- assign site_id = 'https://www.choandahn.com/#website' -%}
+{%- assign cho_id = 'https://ax.choandahn.com/#cho' -%}
+{%- assign ahn_id = 'https://ax.choandahn.com/#ahn' -%}
+{%- if pg_lang == 'en' -%}{%- assign about_page = '/en/about/' | absolute_url -%}{%- else -%}{%- assign about_page = '/about/' | absolute_url -%}{%- endif -%}
+{%- capture org_node -%}
+{
+  "@type": "Organization",
+  "@id": "{{ org_id }}",
+  "name": "조앤안",
+  "alternateName": ["CHO&AHN", "Cho&Ahn", "choandahn"],
+  "url": "https://www.choandahn.com/",
+  "logo": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
+  "description": "커머스 브랜드가 AI로 더 잘 팔도록 돕는 2인 팀입니다. AI 커머셜 이미지 서비스 GESTEL과 광고 운영 자동화 서비스 조앤안AX를 만들고 운영합니다.",
+  "taxID": "112-41-09291",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "안암로 145, 고려대학교 경영본관 217호",
+    "addressLocality": "성북구",
+    "addressRegion": "서울특별시",
+    "postalCode": "02841",
+    "addressCountry": "KR"
+  },
+  "founder": [{ "@id": "{{ cho_id }}" }, { "@id": "{{ ahn_id }}" }],
+  "brand": [
+    { "@type": "Brand", "name": "GESTEL", "url": "https://www.gestel.studio/" },
+    { "@type": "Brand", "name": "조앤안AX", "alternateName": "C&AX", "url": "https://ax.choandahn.com/" }
+  ],
+  "sameAs": ["https://github.com/choandahn"]
+}
+{%- endcapture -%}
+{%- capture people_nodes -%}
+{
+  "@type": "Person",
+  "@id": "{{ cho_id }}",
+  "name": "조성우",
+  "alternateName": "Sungwoo Cho",
+  "jobTitle": "공동대표",
+  "email": "cho@choandahn.com",
+  "image": {{ '/assets/images/cho.jpg' | absolute_url | jsonify }},
+  "url": {{ about_page | jsonify }},
+  "worksFor": { "@id": "{{ org_id }}" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "고려대학교" },
+  "description": "GESTEL 사업·마케팅 리드, 전 베인앤컴퍼니(Bain & Company) 전략 컨설턴트"
+},
+{
+  "@type": "Person",
+  "@id": "{{ ahn_id }}",
+  "name": "안운장",
+  "alternateName": "Woonjang Ahn",
+  "jobTitle": "공동대표",
+  "email": "ahn@choandahn.com",
+  "image": {{ '/assets/images/ahn.jpg' | absolute_url | jsonify }},
+  "url": {{ about_page | jsonify }},
+  "worksFor": { "@id": "{{ org_id }}" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "고려대학교" },
+  "description": "GESTEL 개발·운영 총괄, 전 우아한형제들(배달의민족)·천명앤컴퍼니 소프트웨어 엔지니어",
+  "sameAs": ["https://github.com/woonjangahn"]
+}
+{%- endcapture -%}
+{%- capture website_node -%}
+{
+  "@type": "WebSite",
+  "@id": "{{ site_id }}",
+  "name": "조앤안",
+  "alternateName": "CHO&AHN",
+  "url": "https://www.choandahn.com/",
+  "inLanguage": ["ko", "en"],
+  "publisher": { "@id": "{{ org_id }}" }
+}
+{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{%- if page.layout == 'post' -%}
+  {%- assign is_curation = false -%}
+  {%- if page.categories contains 'curation' -%}{%- assign is_curation = true -%}{%- endif -%}
+  {%- if page.source_url and page.source_author -%}
+    {%- capture author_node -%}{ "@type": "Person", "name": {{ page.source_author | jsonify }} }{%- endcapture -%}
+  {%- elsif page.author == '성우' or page.author == '조성우' or page.author == 'Sungwoo' or page.author == 'Cho' -%}
+    {%- capture author_node -%}{ "@type": "Person", "@id": "{{ cho_id }}", "name": "조성우", "url": {{ about_page | jsonify }} }{%- endcapture -%}
+  {%- elsif page.author == '운장' or page.author == '안운장' or page.author == 'Woonjang' or page.author == 'Ahn' -%}
+    {%- capture author_node -%}{ "@type": "Person", "@id": "{{ ahn_id }}", "name": "안운장", "url": {{ about_page | jsonify }} }{%- endcapture -%}
+  {%- else -%}
+    {%- capture author_node -%}{ "@id": "{{ org_id }}" }{%- endcapture -%}
+  {%- endif -%}
+  {%- if pg_lang == 'en' -%}
+    {%- assign crumb_home = 'CHO&AHN' -%}{%- assign crumb_home_url = '/en/' -%}{%- assign crumb_list = 'Essays' -%}{%- assign crumb_list_url = '/en/essays/' -%}
+  {%- elsif is_curation -%}
+    {%- assign crumb_home = '조앤안' -%}{%- assign crumb_home_url = '/' -%}{%- assign crumb_list = '큐레이션' -%}{%- assign crumb_list_url = '/curation/' -%}
+  {%- else -%}
+    {%- assign crumb_home = '조앤안' -%}{%- assign crumb_home_url = '/' -%}{%- assign crumb_list = '에세이' -%}{%- assign crumb_list_url = '/essays/' -%}
+  {%- endif %}
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ canonical_url }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page_desc | jsonify }},
+      "inLanguage": "{{ pg_lang }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "image": {{ og_image | jsonify }},
+      "mainEntityOfPage": {{ canonical_url | jsonify }},
+      "isPartOf": { "@id": "{{ site_id }}" },
+      "publisher": { "@id": "{{ org_id }}" },
+      {%- if page.source_url %}
+      "isBasedOn": {{ page.source_url | jsonify }},
+      "translationOfWork": {
+        "@type": "CreativeWork",
+        "url": {{ page.source_url | jsonify }}
+        {%- if page.source_author %}, "author": { "@type": "Person", "name": {{ page.source_author | jsonify }} }{% endif %}
+        {%- if page.source_name %}, "publisher": { "@type": "Organization", "name": {{ page.source_name | jsonify }} }{% endif %}
+      },
+      "translator": { "@id": "{{ org_id }}" },
+      {%- endif %}
+      "author": {{ author_node }}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": {{ crumb_home | jsonify }}, "item": {{ crumb_home_url | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 2, "name": {{ crumb_list | jsonify }}, "item": {{ crumb_list_url | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ canonical_url | jsonify }} }
+      ]
+    }
+{%- elsif page.url == '/' or page.url == '/en/' %}
+    {{ website_node }},
+    {{ org_node }},
+    {{ people_nodes }}
+{%- elsif page.url == '/about/' or page.url == '/en/about/' %}
+    {
+      "@type": "AboutPage",
+      "@id": "{{ canonical_url }}#webpage",
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_desc | jsonify }},
+      "inLanguage": "{{ pg_lang }}",
+      "isPartOf": { "@id": "{{ site_id }}" },
+      "about": { "@id": "{{ org_id }}" },
+      "mainEntity": { "@id": "{{ org_id }}" }
+    },
+    {{ org_node }},
+    {{ people_nodes }}
+{%- else %}
+    {
+      "@type": "{{ page.schema_type | default: 'WebPage' }}",
+      "@id": "{{ canonical_url }}#webpage",
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_desc | jsonify }},
+      "inLanguage": "{{ pg_lang }}",
+      "isPartOf": { "@id": "{{ site_id }}" },
+      "publisher": { "@id": "{{ org_id }}" }
+    }
+{%- endif %}
+  ]
+}
+</script>

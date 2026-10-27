@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# 조앤안 (CHO&AHN)
+
+> 조앤안은 커머스 브랜드가 AI로 더 잘 팔도록 돕는 2인 팀입니다. 공동대표 조성우(비즈니스)와 안운장(프로덕트)이 AI 커머셜 이미지 서비스 GESTEL과 광고 운영 자동화 서비스 조앤안AX를 만들고 운영하며, 이 사이트에 AI, 스타트업, 프로덕트, 프로그래밍에 대한 글을 씁니다.
+
+핵심 사실:
+
+- 회사: 조앤안(CHO&AHN), 서울 성북구. 영문 표기는 CHO&AHN 또는 Cho&Ahn
+- GESTEL(https://www.gestel.studio): 커머셜 이미지 촬영 비용을 줄여 주는 AI 이미지 생성 서비스. 커머스 브랜드 2,000여 곳이 씁니다
+- 조앤안AX(https://ax.choandahn.com, 영문 약칭 C&AX): 커머스 브랜드의 반복되는 광고 운영 업무(세팅, 검수, 게재, 매일 리포트, 예산 이상 알림)를 AI로 자동화해 주는 맞춤 구축 서비스. 메타 광고부터 시작합니다. 가격과 진행 방식은 https://ax.choandahn.com/llms.txt
+- 조성우: 공동대표, GESTEL 사업·마케팅 리드, 전 베인앤컴퍼니(Bain & Company) 전략 컨설턴트. cho@choandahn.com
+- 안운장: 공동대표, GESTEL 개발·운영 총괄, 전 우아한형제들(배달의민족)·천명앤컴퍼니 소프트웨어 엔지니어. ahn@choandahn.com
+- 글의 종류: 조앤안이 직접 쓴 글과, 해외 글을 한국어로 옮긴 번역(제목 끝에 "(번역)", 각 글 맨 위에 원문 링크). 번역 글의 주장과 내용은 원저자의 것입니다.
+
+## 페이지
+
+- [홈](https://www.choandahn.com/): 회사 소개와 최근 글
+- [소개](https://www.choandahn.com/about/): 팀, 경력, 만드는 것
+- [에세이](https://www.choandahn.com/essays/): 모든 한국어 글
+- [큐레이션](https://www.choandahn.com/curation/): 번역 글 모음
+- [English](https://www.choandahn.com/en/): 영어 홈과 소개
+- [RSS](https://www.choandahn.com/feed.xml)
+
+## 직접 쓴 글
+
+{% for post in site.posts %}{% unless post.categories contains 'curation' %}- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description }}
+{% endunless %}{% endfor %}
+## 최근 번역 글
+
+{% assign translations = site.posts | where_exp: "p", "p.categories contains 'curation'" %}{% for post in translations limit: 20 %}- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.source_author }}{% if post.source_name %}, {{ post.source_name }}{% endif %} 원문
+{% endfor %}
+## Optional
+
+- [조앤안AX llms.txt](https://ax.choandahn.com/llms.txt)
+- [GESTEL](https://www.gestel.studio)

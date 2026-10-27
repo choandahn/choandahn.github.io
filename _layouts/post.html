@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<article class="post" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<article class="post" lang="{{ page.lang | default: site.lang | default: 'ko' }}">
   {% if page.image %}
   <figure class="post-hero">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" width="{{ page.image_width | default: 1024 }}" height="{{ page.image_height | default: 768 }}" fetchpriority="high">
   </figure>
   {% endif %}
   <h1>{{ page.title }}</h1>
@@ -14,7 +14,7 @@ layout: default
   </p>
   <hr>
 
-  {{ content }}
+  {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
 
   <hr>
   {% assign lang_posts = site.posts | where: "lang", page.lang %}
@@ -32,8 +32,8 @@ layout: default
     {% if next_post %}<a href="{{ next_post.url | relative_url }}">{{ next_post.title }}</a> →{% endif %}
   </p>
   {% if page.lang == 'en' %}
-  <p class="back-link"><a href="{{ '/essays/' | relative_url }}">All essays</a> · <a href="{{ '/' | relative_url }}">home</a></p>
+  <p class="back-link"><a href="{{ '/en/essays/' | relative_url }}">All essays</a> · <a href="{{ '/en/' | relative_url }}">home</a></p>
   {% else %}
-  <p class="back-link"><a href="{{ '/ko/essays/' | relative_url }}">모든 에세이</a> · <a href="{{ '/ko/' | relative_url }}">home</a></p>
+  <p class="back-link"><a href="{{ '/essays/' | relative_url }}">모든 에세이</a> · <a href="{{ '/' | relative_url }}">home</a></p>
   {% endif %}
 </article>

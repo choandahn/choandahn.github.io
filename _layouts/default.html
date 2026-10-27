@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-{% assign pg_lang = page.lang | default: site.lang | default: 'en' %}
-{% if pg_lang == 'ko' %}
-  {% assign default_desc = site.description_ko | default: site.description %}
-  {% assign og_locale = 'ko_KR' %}
-  {% assign alt_lang = 'en' %}
-  {% assign alt_locale = 'en_US' %}
-  {% if page.translation %}
-    {% assign alt_path = page.translation %}
-  {% elsif page.layout == 'post' %}
-    {% assign alt_path = '/' %}
-  {% else %}
-    {% assign alt_path = page.url | remove_first: '/ko' %}
-    {% if alt_path == '' %}{% assign alt_path = '/' %}{% endif %}
-  {% endif %}
-{% else %}
+{% assign pg_lang = page.lang | default: site.lang | default: 'ko' %}
+{% comment %}번역 쌍이 있는 페이지에만 hreflang을 단다. alt_path는 언어 전환 링크로도 쓴다.{% endcomment %}
+{% assign has_translation = true %}
+{% if pg_lang == 'en' %}
   {% assign default_desc = site.description_en | default: site.description %}
+  {% assign site_name = 'CHO&AHN' %}
   {% assign og_locale = 'en_US' %}
-  {% assign alt_lang = 'ko' %}
   {% assign alt_locale = 'ko_KR' %}
   {% if page.translation %}
     {% assign alt_path = page.translation %}
-  {% elsif page.layout == 'post' %}
-    {% assign alt_path = '/ko/' %}
+  {% elsif page.layout == 'post' or page.no_translation %}
+    {% assign alt_path = '/' %}{% assign has_translation = false %}
   {% else %}
-    {% capture alt_path %}/ko{{ page.url }}{% endcapture %}
+    {% assign alt_path = page.url | remove_first: '/en' %}
+    {% if alt_path == '' %}{% assign alt_path = '/' %}{% endif %}
+  {% endif %}
+{% else %}
+  {% assign default_desc = site.description_ko | default: site.description %}
+  {% assign site_name = '조앤안' %}
+  {% assign og_locale = 'ko_KR' %}
+  {% assign alt_locale = 'en_US' %}
+  {% if page.translation %}
+    {% assign alt_path = page.translation %}
+  {% elsif page.layout == 'post' or page.no_translation %}
+    {% assign alt_path = '/en/' %}{% assign has_translation = false %}
+  {% else %}
+    {% capture alt_path %}/en{{ page.url }}{% endcapture %}
   {% endif %}
 {% endif %}
 {% assign page_desc = page.description | default: default_desc %}
-{% if page.title %}{% capture page_title %}{{ page.title }} — {{ site.title }}{% endcapture %}{% else %}{% capture page_title %}{{ site.title }} — essays on AI, startups, product, and programming{% endcapture %}{% endif %}
+{% if page.head_title %}{% assign page_title = page.head_title %}{% elsif page.title %}{% capture page_title %}{{ page.title }} — {{ site_name }}{% endcapture %}{% else %}{% assign page_title = site_name %}{% endif %}
+{% assign og_title = page.title | default: page.head_title | default: site_name %}
 {% assign og_image = page.share_image | default: page.image | default: '/assets/images/og.png' | absolute_url %}
 {% assign canonical_url = page.url | absolute_url %}
 {% assign alt_url = alt_path | absolute_url %}
+{% if pg_lang == 'en' %}{% assign ko_url = alt_url %}{% assign en_url = canonical_url %}{% else %}{% assign ko_url = canonical_url %}{% assign en_url = alt_url %}{% endif %}
 <html lang="{{ pg_lang }}">
 <head>
 <meta charset="utf-8">
@@ -38,92 +42,57 @@
 <title>{{ page_title }}</title>
 <meta name="description" content="{{ page_desc }}">
 <link rel="canonical" href="{{ canonical_url }}">
-<link rel="alternate" hreflang="{{ pg_lang }}" href="{{ canonical_url }}">
-<link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_url }}">
-<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
-<meta property="og:site_name" content="{{ site.title }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+{% if has_translation %}
+<link rel="alternate" hreflang="ko" href="{{ ko_url }}">
+<link rel="alternate" hreflang="en" href="{{ en_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ ko_url }}">
+{% endif %}
+<meta property="og:site_name" content="{{ site_name }}">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:title" content="{{ og_title }}">
 <meta property="og:description" content="{{ page_desc }}">
 <meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:locale" content="{{ og_locale }}">
-<meta property="og:locale:alternate" content="{{ alt_locale }}">
+{% if has_translation %}<meta property="og:locale:alternate" content="{{ alt_locale }}">{% endif %}
 <meta property="og:image" content="{{ og_image }}">
+{% unless page.share_image or page.image %}<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">{% endunless %}
+<meta property="og:image:alt" content="{{ page.image_alt | default: og_title }}">
 {% if page.layout == 'post' %}
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 {% if page.author %}<meta property="article:author" content="{{ page.author }}">{% endif %}
 {% endif %}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:title" content="{{ og_title }}">
 <meta name="twitter:description" content="{{ page_desc }}">
 <meta name="twitter:image" content="{{ og_image }}">
-{% if pg_lang == 'ko' %}{% assign feed_path = '/ko/feed.xml' %}{% assign alt_feed_path = '/feed.xml' %}{% assign alt_feed_lang = 'en' %}{% else %}{% assign feed_path = '/feed.xml' %}{% assign alt_feed_path = '/ko/feed.xml' %}{% assign alt_feed_lang = 'ko' %}{% endif %}
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ feed_path | relative_url }}">
+{% if pg_lang == 'en' %}{% assign feed_path = '/en/feed.xml' %}{% assign alt_feed_path = '/feed.xml' %}{% assign alt_feed_lang = 'ko' %}{% else %}{% assign feed_path = '/feed.xml' %}{% assign alt_feed_path = '/en/feed.xml' %}{% assign alt_feed_lang = 'en' %}{% endif %}
+<link rel="alternate" type="application/rss+xml" title="{{ site_name }}" href="{{ feed_path | relative_url }}">
 <link rel="alternate" type="application/rss+xml" hreflang="{{ alt_feed_lang }}" title="{{ site.title }}" href="{{ alt_feed_path | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
-<link rel="preload" href="{{ '/assets/fonts/PretendardVariable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-{% if page.layout == 'post' %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ page.title | jsonify }},
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",
-  "inLanguage": "{{ pg_lang }}",
-  "description": {{ page_desc | jsonify }},
-  "author": { "@type": "Person", "name": {{ page.author | default: 'CHO&AHN' | jsonify }} },
-  "publisher": { "@type": "Organization", "@id": "https://www.choandahn.com/#organization", "name": "조앤안", "alternateName": "CHO&AHN", "url": {{ '/' | absolute_url | jsonify }} },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | jsonify }} },
-  "image": {{ og_image | jsonify }}
-}
-</script>
-{% elsif page.url == '/' or page.url == '/ko/' %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "CHO&AHN",
-  "url": {{ '/' | absolute_url | jsonify }},
-  "inLanguage": ["en", "ko"],
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://www.choandahn.com/#organization",
-    "name": "조앤안",
-    "alternateName": ["CHO&AHN", "Cho&Ahn", "choandahn"],
-    "url": {{ '/' | absolute_url | jsonify }},
-    "logo": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
-    "founder": [
-      { "@type": "Person", "@id": "https://ax.choandahn.com/#cho", "name": "조성우", "alternateName": "Sungwoo", "email": "cho@choandahn.com" },
-      { "@type": "Person", "@id": "https://ax.choandahn.com/#ahn", "name": "안운장", "alternateName": "Woonjang", "email": "ahn@choandahn.com" }
-    ],
-    "brand": [
-      { "@type": "Brand", "name": "GESTEL", "url": "https://www.gestel.studio/" },
-      { "@type": "Brand", "name": "조앤안AX", "alternateName": "C&AX", "url": "https://ax.choandahn.com/" }
-    ]
-  }
-}
-</script>
-{% endif %}
+{% include jsonld.html %}
 </head>
 <body>
-{% if pg_lang == 'ko' %}
-  {% assign essays_url = '/ko/essays/' %}
-  {% assign about_url  = '/ko/about/' %}
-  {% assign home_url   = '/ko/' %}
-  {% assign essays_label = '에세이' %}
+{% if pg_lang == 'en' %}
+  {% assign essays_url = '/en/essays/' %}
+  {% assign about_url  = '/en/about/' %}
+  {% assign home_url   = '/en/' %}
+  {% assign essays_label = 'essays' %}
   {% assign about_label  = 'about' %}
-  {% assign alt_label = 'EN' %}
+  {% assign alt_label = '한국어' %}
 {% else %}
   {% assign essays_url = '/essays/' %}
   {% assign about_url  = '/about/' %}
   {% assign home_url   = '/' %}
-  {% assign essays_label = 'essays' %}
-  {% assign about_label  = 'about' %}
-  {% assign alt_label = '한국어' %}
+  {% assign essays_label = '에세이' %}
+  {% assign about_label  = '소개' %}
+  {% assign alt_label = 'EN' %}
 {% endif %}
-{% assign curation_url = '/ko/curation/' %}
+{% assign curation_url = '/curation/' %}
 {% assign nav_alt_url = alt_path %}
 
 <header class="site-header">
@@ -155,7 +124,7 @@
 <small>
 © {{ 'now' | date: '%Y' }} CHO&amp;AHN ·
 <a href="{{ feed_path | relative_url }}">RSS</a> ·
-<a href="{{ about_url | relative_url }}">contact</a>
+<a href="{{ about_url | relative_url }}">{% if pg_lang == 'en' %}contact{% else %}연락처{% endif %}</a>
 </small>
 </footer>
 </body>

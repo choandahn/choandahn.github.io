@@ -1,0 +1,28 @@
+{%- if include.lang == 'en' -%}
+  {%- assign home_path = '/en/' -%}{%- assign self_path = '/en/feed.xml' -%}{%- assign alt_path = '/feed.xml' -%}{%- assign alt_lang = 'ko' -%}
+  {%- assign feed_desc = site.description_en | default: site.description -%}
+{%- else -%}
+  {%- assign home_path = '/' -%}{%- assign self_path = '/feed.xml' -%}{%- assign alt_path = '/en/feed.xml' -%}{%- assign alt_lang = 'en' -%}
+  {%- assign feed_desc = site.description_ko | default: site.description -%}
+{%- endif -%}
+{%- assign feed_posts = site.posts | where: "lang", include.lang -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ feed_desc | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}{{ home_path }}</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}{{ self_path }}" rel="self" type="application/rss+xml"/>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}{{ alt_path }}" rel="alternate" hreflang="{{ alt_lang }}" type="application/rss+xml"/>
+    <language>{{ include.lang }}</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for post in feed_posts limit:40 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.content | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+    </item>{% endfor %}
+  </channel>
+</rss>
