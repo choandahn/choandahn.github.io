@@ -297,6 +297,16 @@ img { max-width: 100%; height: auto; margin: 1.2em 0; }
   font-size: 15px;
   letter-spacing: 0;
 }
+.person-body .career {
+  padding-left: 18px;
+  font-size: 15px;
+}
+.person-body .career li { margin-bottom: 6px; }
+.person-body .career span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
 .person-body .contact {
   margin-top: 10px;
   font-family: "SF Mono", Monaco, Consolas, monospace;
@@ -359,4 +369,5 @@ article th {
   .site-header { padding-top: 28px; }
   .site-title a { font-size: 20px; }
   h1 { font-size: 20px; }
+  .site-nav .nav-sep { margin: 0 4px; }
 }
