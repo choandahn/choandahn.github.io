@@ -1,19 +1,6 @@
 <!DOCTYPE html>
-{% assign pg_lang = page.lang | default: site.lang | default: 'en' %}
-{% if pg_lang == 'ko' %}
-  {% assign default_desc = site.description_ko | default: site.description %}
-  {% assign og_locale = 'ko_KR' %}
-  {% assign alt_lang = 'en' %}
-  {% assign alt_locale = 'en_US' %}
-  {% if page.translation %}
-    {% assign alt_path = page.translation %}
-  {% elsif page.layout == 'post' %}
-    {% assign alt_path = '/' %}
-  {% else %}
-    {% assign alt_path = page.url | remove_first: '/ko' %}
-    {% if alt_path == '' %}{% assign alt_path = '/' %}{% endif %}
-  {% endif %}
-{% else %}
+{% assign pg_lang = page.lang | default: site.lang | default: 'ko' %}
+{% if pg_lang == 'en' %}
   {% assign default_desc = site.description_en | default: site.description %}
   {% assign og_locale = 'en_US' %}
   {% assign alt_lang = 'ko' %}
@@ -21,13 +8,26 @@
   {% if page.translation %}
     {% assign alt_path = page.translation %}
   {% elsif page.layout == 'post' %}
-    {% assign alt_path = '/ko/' %}
+    {% assign alt_path = '/' %}
   {% else %}
-    {% capture alt_path %}/ko{{ page.url }}{% endcapture %}
+    {% assign alt_path = page.url | remove_first: '/en' %}
+    {% if alt_path == '' %}{% assign alt_path = '/' %}{% endif %}
+  {% endif %}
+{% else %}
+  {% assign default_desc = site.description_ko | default: site.description %}
+  {% assign og_locale = 'ko_KR' %}
+  {% assign alt_lang = 'en' %}
+  {% assign alt_locale = 'en_US' %}
+  {% if page.translation %}
+    {% assign alt_path = page.translation %}
+  {% elsif page.layout == 'post' %}
+    {% assign alt_path = '/en/' %}
+  {% else %}
+    {% capture alt_path %}/en{{ page.url }}{% endcapture %}
   {% endif %}
 {% endif %}
 {% assign page_desc = page.description | default: default_desc %}
-{% if page.title %}{% capture page_title %}{{ page.title }} — {{ site.title }}{% endcapture %}{% else %}{% capture page_title %}{{ site.title }} — essays on AI, startups, product, and programming{% endcapture %}{% endif %}
+{% if page.title %}{% capture page_title %}{{ page.title }} — {{ site.title }}{% endcapture %}{% elsif pg_lang == 'en' %}{% capture page_title %}{{ site.title }} — essays on AI, startups, product, and programming{% endcapture %}{% else %}{% capture page_title %}조앤안 {{ site.title }} — AI, 스타트업, 프로덕트, 프로그래밍 에세이{% endcapture %}{% endif %}
 {% assign og_image = page.share_image | default: page.image | default: '/assets/images/og.png' | absolute_url %}
 {% assign canonical_url = page.url | absolute_url %}
 {% assign alt_url = alt_path | absolute_url %}
@@ -57,7 +57,7 @@
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{{ page_desc }}">
 <meta name="twitter:image" content="{{ og_image }}">
-{% if pg_lang == 'ko' %}{% assign feed_path = '/ko/feed.xml' %}{% assign alt_feed_path = '/feed.xml' %}{% assign alt_feed_lang = 'en' %}{% else %}{% assign feed_path = '/feed.xml' %}{% assign alt_feed_path = '/ko/feed.xml' %}{% assign alt_feed_lang = 'ko' %}{% endif %}
+{% if pg_lang == 'en' %}{% assign feed_path = '/en/feed.xml' %}{% assign alt_feed_path = '/feed.xml' %}{% assign alt_feed_lang = 'ko' %}{% else %}{% assign feed_path = '/feed.xml' %}{% assign alt_feed_path = '/en/feed.xml' %}{% assign alt_feed_lang = 'en' %}{% endif %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ feed_path | relative_url }}">
 <link rel="alternate" type="application/rss+xml" hreflang="{{ alt_feed_lang }}" title="{{ site.title }}" href="{{ alt_feed_path | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
@@ -79,14 +79,14 @@
   "image": {{ og_image | jsonify }}
 }
 </script>
-{% elsif page.url == '/' or page.url == '/ko/' %}
+{% elsif page.url == '/' or page.url == '/en/' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "CHO&AHN",
   "url": {{ '/' | absolute_url | jsonify }},
-  "inLanguage": ["en", "ko"],
+  "inLanguage": ["ko", "en"],
   "publisher": {
     "@type": "Organization",
     "@id": "https://www.choandahn.com/#organization",
@@ -108,22 +108,22 @@
 {% endif %}
 </head>
 <body>
-{% if pg_lang == 'ko' %}
-  {% assign essays_url = '/ko/essays/' %}
-  {% assign about_url  = '/ko/about/' %}
-  {% assign home_url   = '/ko/' %}
-  {% assign essays_label = '에세이' %}
+{% if pg_lang == 'en' %}
+  {% assign essays_url = '/en/essays/' %}
+  {% assign about_url  = '/en/about/' %}
+  {% assign home_url   = '/en/' %}
+  {% assign essays_label = 'essays' %}
   {% assign about_label  = 'about' %}
-  {% assign alt_label = 'EN' %}
+  {% assign alt_label = '한국어' %}
 {% else %}
   {% assign essays_url = '/essays/' %}
   {% assign about_url  = '/about/' %}
   {% assign home_url   = '/' %}
-  {% assign essays_label = 'essays' %}
+  {% assign essays_label = '에세이' %}
   {% assign about_label  = 'about' %}
-  {% assign alt_label = '한국어' %}
+  {% assign alt_label = 'EN' %}
 {% endif %}
-{% assign curation_url = '/ko/curation/' %}
+{% assign curation_url = '/curation/' %}
 {% assign nav_alt_url = alt_path %}
 
 <header class="site-header">

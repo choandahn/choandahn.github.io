@@ -4,7 +4,7 @@ description_en: CHO&AHN — essays on AI, startups, product, and programming by 
 description_ko: 조앤안 — AI, 스타트업, 프로덕트, 프로그래밍에 대한 성우와 운장의 에세이.
 url: "https://www.choandahn.com"
 baseurl: ""
-lang: en
+lang: ko
 
 author:
   name: CHO&AHN
@@ -14,6 +14,7 @@ author:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Build
 markdown: kramdown

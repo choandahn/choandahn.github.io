@@ -1,14 +1,20 @@
 ---
 layout: default
-title: Essays
+title: 에세이
 permalink: /essays/
-lang: en
-description: All essays from CHO&AHN on AI, startups, product, and programming.
+redirect_from: /ko/essays/
+lang: ko
+description: 조앤안이 쓰는 AI, 스타트업, 프로덕트, 프로그래밍 에세이 모음.
 ---
-<h1>Essays</h1>
+<h1>에세이</h1>
 
-{% assign posts = site.posts | where: "lang", "en" %}
-<p>{{ posts.size }} total.</p>
+{% assign posts = site.posts | where: "lang", "ko" %}
+<p>총 {{ posts.size }}편.</p>
+
+<p class="filter-links">
+  <a href="{{ '/essays/' | relative_url }}">전체</a> ·
+  <a href="{{ '/curation/' | relative_url }}">Sam 큐레이션</a>
+</p>
 
 <table class="essay-list">
 {% for post in posts %}
@@ -16,6 +22,7 @@ description: All essays from CHO&AHN on AI, startups, product, and programming.
     <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
     <td>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.categories contains "curation" %}<span class="essay-source">· 번역</span>{% endif %}
     </td>
   </tr>
 {% endfor %}

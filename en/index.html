@@ -1,0 +1,45 @@
+---
+layout: default
+permalink: /en/
+lang: en
+description: CHO&AHN is a two-person team helping commerce brands sell more with AI. We build GESTEL and 조앤안AX (C&AX), and write about AI, startups, product, and programming.
+---
+<h1>CHO&amp;AHN</h1>
+
+<p>CHO&amp;AHN is a two-person team helping commerce brands sell more with AI. <b>Sungwoo</b> leads business, <b>Woonjang</b> leads product.</p>
+
+<ul>
+<li><a href="https://gestel.studio" class="gestel-link"><img src="{{ '/assets/images/gestel.svg' | relative_url }}" class="gestel-icon" alt="" aria-hidden="true">GESTEL</a> — AI commercial image generation that cuts the cost of product shoots. Used by 2,000+ commerce brands.</li>
+<li><a href="https://ax.choandahn.com/">조앤안AX</a> (C&amp;AX) — done-for-you AI automation of ad operations for Korean commerce brands, starting with Meta ads. (Korean only)</li>
+</ul>
+
+<p>Our principle: anyone should benefit from AI, regardless of AI literacy. GESTEL lowers the barrier with a simple interface; 조앤안AX does it with hands-on setup and operation built around each brand.</p>
+
+<p>Random notes on AI, startups, product, and programming.</p>
+
+<h2>Essays</h2>
+
+{% assign posts = site.posts | where: "lang", "en" %}
+<table class="essay-list">
+{% for post in posts limit: 10 %}
+  <tr>
+    <td class="essay-date">{{ post.date | date: "%Y-%m-%d" }}</td>
+    <td>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </td>
+  </tr>
+{% endfor %}
+</table>
+
+{% if posts.size > 10 %}
+<p><a href="{{ '/en/essays/' | relative_url }}">All essays →</a></p>
+{% endif %}
+
+<h2>Elsewhere</h2>
+<ul>
+<li><a href="https://gestel.studio" class="gestel-link"><img src="{{ '/assets/images/gestel.svg' | relative_url }}" class="gestel-icon" alt="" aria-hidden="true">GESTEL</a> — AI commercial image generation</li>
+<li><a href="https://ax.choandahn.com/">조앤안AX</a> — ad-operations automation for commerce brands (Korean)</li>
+<li><a href="https://github.com/choandahn">GitHub</a> — @choandahn</li>
+<li>Sungwoo — <a href="mailto:cho@choandahn.com">cho@choandahn.com</a></li>
+<li>Woonjang — <a href="mailto:ahn@choandahn.com">ahn@choandahn.com</a></li>
+</ul>

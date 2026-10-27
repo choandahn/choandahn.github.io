@@ -60,4 +60,4 @@ share_image: /assets/images/choandahn-ax-og.png
 
 **[무료 진단 신청하기](https://ax.choandahn.com/#contact)**
 
-궁금한 점은 [ahn@choandahn.com](mailto:ahn@choandahn.com)으로 보내 주세요.
+궁금한 점은 [cho@choandahn.com](mailto:cho@choandahn.com)으로 보내 주세요.

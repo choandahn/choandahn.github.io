@@ -4,6 +4,8 @@ title: "The Hypertext Web Is Still Alive"
 date: 2026-04-17
 author: Ahn
 lang: en
+permalink: /en/essays/2026/04/17/welcome-en/
+redirect_from: /essays/2026/04/17/welcome-en/
 description: Why the design philosophy of PG's blog and Hacker News still holds up in 2026.
 translation: /essays/2026/04/17/welcome/
 ---

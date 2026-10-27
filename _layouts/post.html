@@ -32,8 +32,8 @@ layout: default
     {% if next_post %}<a href="{{ next_post.url | relative_url }}">{{ next_post.title }}</a> →{% endif %}
   </p>
   {% if page.lang == 'en' %}
-  <p class="back-link"><a href="{{ '/essays/' | relative_url }}">All essays</a> · <a href="{{ '/' | relative_url }}">home</a></p>
+  <p class="back-link"><a href="{{ '/en/essays/' | relative_url }}">All essays</a> · <a href="{{ '/en/' | relative_url }}">home</a></p>
   {% else %}
-  <p class="back-link"><a href="{{ '/ko/essays/' | relative_url }}">모든 에세이</a> · <a href="{{ '/ko/' | relative_url }}">home</a></p>
+  <p class="back-link"><a href="{{ '/essays/' | relative_url }}">모든 에세이</a> · <a href="{{ '/' | relative_url }}">home</a></p>
   {% endif %}
 </article>
