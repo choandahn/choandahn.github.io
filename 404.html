@@ -7,6 +7,16 @@ no_translation: true
 robots: noindex
 description: 요청한 페이지가 없습니다.
 ---
+<script>
+{% include qr-redirect.js %}
+// 명함 QR(/qr/...) 중 _data/qr.yml에 없는 주소. 대소문자만 다르면(/QR/CHO) 그 id로, 아니면 unknown 목적지로 보낸다.
+(function () {
+  var m = location.pathname.match(/^\/qr(?:\/|$)(.*)$/i);
+  if (!m) return;
+  var qr = {{ site.data.qr | jsonify }}, id = m[1].replace(/\/$/, '').toLowerCase();
+  qrGo(Object.prototype.hasOwnProperty.call(qr, id) ? qr[id] : qr.unknown);
+})();
+</script>
 <h1>페이지를 찾을 수 없습니다</h1>
 
 <p>주소가 바뀌었거나 없는 페이지입니다. 아래에서 찾아보세요.</p>

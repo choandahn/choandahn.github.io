@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% comment %}명함 QR 리다이렉트 페이지(_plugins/qr_redirects.rb가 만듦). 사이트 레이아웃, 분석, 글꼴, CSS를 쓰지 않는다.
+meta refresh는 noscript 안에 둔다. 밖에 두면 스크립트가 쿼리를 붙인 이동을 meta refresh의 맨 목적지 이동이 덮어쓸 수 있다.{% endcomment %}
+{%- assign host = page.destination | split: '/' -%}
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script>
+{% include qr-redirect.js %}qrGo({{ page.destination | jsonify }});
+</script>
+<meta name="robots" content="noindex">
+<noscript><meta http-equiv="refresh" content="0; url={{ page.destination | escape }}"></noscript>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ host[2] }}</title>
+</head>
+<body>
+<p><a href="{{ page.destination | escape }}">{{ host[2] }}</a></p>
+</body>
+</html>

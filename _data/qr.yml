@@ -1,0 +1,6 @@
+# 명함 QR 목적지. 키가 주소가 됩니다(cho → https://choandahn.com/qr/cho).
+# 이미 인쇄된 cho, ahn은 절대 지우거나 이름을 바꾸지 마세요. 운영 방법은 README.md "명함 QR 리다이렉트".
+# unknown은 인쇄용이 아니라, 목록에 없는 /qr/ 주소로 들어왔을 때 보내는 곳입니다(404.html).
+cho: https://ax.choandahn.com/?utm_source=namecard&utm_medium=qr&utm_campaign=founders_2026&utm_content=cho
+ahn: https://ax.choandahn.com/?utm_source=namecard&utm_medium=qr&utm_campaign=founders_2026&utm_content=ahn
+unknown: https://ax.choandahn.com/?utm_source=namecard&utm_medium=qr&utm_campaign=founders_2026&utm_content=unknown
